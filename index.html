@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>Olock Cloth | Everyday, Elevated</title>
+<meta name="description" content="Discover the latest styles from Olock Cloth. Browse products and order directly.">
+<style>
+:root{--black:#111;--muted:#666;--line:#e8e8e8;--soft:#f7f7f7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--black);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+.wrap{width:min(1120px,92%);margin:auto}
+.topbar{border-bottom:1px solid var(--line);font-size:11px;letter-spacing:1.4px;text-align:center;padding:10px;color:#444}
+header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0}
+.wordmark{font-family:Georgia,serif;font-weight:bold;font-size:24px;letter-spacing:3px}
+nav{display:flex;gap:22px;font-size:12px;letter-spacing:1px;text-transform:uppercase}
+.hero{min-height:420px;display:grid;grid-template-columns:1.05fr .95fr;background:#f4f4f1}
+.hero-copy{padding:clamp(28px,6vw,76px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.eyebrow{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#555}
+h1{font-family:Georgia,serif;font-size:clamp(42px,6vw,74px);font-weight:400;line-height:.98;margin:18px 0}
+.hero p{max-width:380px;color:#555;line-height:1.7;font-size:14px}
+.btn{display:inline-flex;justify-content:center;align-items:center;background:#111;color:#fff;border:1px solid #111;padding:14px 21px;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;cursor:pointer;min-height:44px}
+.btn.outline{background:transparent;color:#111}
+.hero-image{min-height:320px;background:#ddd url('https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=85') center/cover no-repeat}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:24px 0;border-bottom:1px solid var(--line);text-align:center}
+.trust strong{display:block;font-size:11px;letter-spacing:1px;text-transform:uppercase}
+.trust span{display:block;color:#777;font-size:12px;margin-top:6px}
+section{padding:62px 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px}
+h2{font-family:Georgia,serif;font-size:clamp(28px,4vw,42px);font-weight:400;margin:0}
+.section-head p{color:var(--muted);font-size:13px;margin:8px 0 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.product{border:1px solid var(--line);background:#fff}
+.product-img{aspect-ratio:4/5;background:#f2f2f2;overflow:hidden}
+.product-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.product:hover .product-img img{transform:scale(1.03)}
+.product-info{padding:15px}
+.product-title{font-family:Georgia,serif;font-size:19px}
+.product-meta{display:flex;justify-content:space-between;gap:10px;margin:8px 0 14px;color:#555;font-size:13px}
+.product .btn{width:100%}
+.note{font-size:12px;color:#777;line-height:1.6;margin-top:14px}
+.about{background:var(--soft);display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;padding:clamp(24px,5vw,55px)}
+.about p{font-size:14px;color:#555;line-height:1.8}
+.order-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px}
+.order-aside{background:#f6f6f6;padding:28px}
+.order-aside p{color:#666;line-height:1.7;font-size:14px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+label{font-size:11px;letter-spacing:1px;text-transform:uppercase}
+input,select,textarea{width:100%;border:1px solid #ddd;background:#fff;padding:13px;border-radius:0;min-height:44px}
+textarea{min-height:92px;resize:vertical}
+.form-help{font-size:12px;color:#666;line-height:1.5}
+footer{background:#111;color:#fff;padding:35px 0;margin-top:25px}
+.footer-inner{display:flex;justify-content:space-between;gap:25px;align-items:center}
+footer p{font-size:12px;color:#bbb;line-height:1.6}
+.social{display:flex;gap:14px;font-size:12px}
+.toast{display:none;background:#f4f4f4;border:1px solid #ddd;padding:15px;margin-top:15px;font-size:13px;line-height:1.6;white-space:pre-wrap}
+@media(max-width:720px){
+ header{padding:17px 0;align-items:flex-start} nav{gap:10px;flex-wrap:wrap;justify-content:flex-end;font-size:10px}.wordmark{font-size:18px;letter-spacing:2px}
+ .hero{grid-template-columns:1fr}.hero-image{min-height:300px;grid-row:1}.hero-copy{padding:32px 25px 38px}
+ .trust{gap:8px}.trust strong{font-size:9px}.trust span{font-size:11px}
+ section{padding:43px 0}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-info{padding:11px}.product-title{font-size:16px}.product-meta{font-size:12px;flex-direction:column;gap:4px}.product .btn{font-size:9px;padding:12px 7px}
+ .about,.order-layout{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}
+ form{grid-template-columns:1fr}.field.full{grid-column:auto}.footer-inner{align-items:flex-start;flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="topbar">A LITTLE MORE YOU, EVERY DAY · OLOCK CLOTH</div>
+<div class="wrap">
+<header>
+  <a class="wordmark" href="#home">OLOCK CLOTH</a>
+  <nav><a href="#shop">Shop</a><a href="#about">Our Story</a><a href="#order">Order</a></nav>
+</header>
+</div>
+<main>
+<section class="hero wrap" id="home" style="padding-top:0;padding-bottom:0">
+  <div class="hero-copy">
+    <div class="eyebrow">New season · New essentials</div>
+    <h1>Wear your<br>story.</h1>
+    <p>Thoughtful everyday style, chosen by you. Explore the collection and message us for help with sizing, availability, and delivery.</p>
+    <a class="btn" href="#shop">Explore collection</a>
+  </div>
+  <div class="hero-image" role="img" aria-label="Clothing collection editorial photograph"></div>
+</section>
+<div class="wrap">
+  <div class="trust">
+    <div><strong>Easy ordering</strong><span>Simple order form</span></div>
+    <div><strong>Personal support</strong><span>Message us anytime</span></div>
+    <div><strong>Style made simple</strong><span>Find your everyday fit</span></div>
+  </div>
+</div>
+<section class="wrap" id="shop">
+  <div class="section-head">
+    <div><div class="eyebrow">The collection</div><h2>Shop the edit</h2><p>Replace these sample products with your actual items and prices.</p></div>
+  </div>
+  <div class="grid" id="productGrid"></div>
+  <p class="note">Product photos and names below are sample placeholders. Update them before sharing this site with customers.</p>
+</section>
+<section class="wrap" id="about">
+  <div class="about">
+    <div><div class="eyebrow">Our point of view</div><h2>Less noise.<br>More style.</h2></div>
+    <div><p>Welcome to Olock Cloth. We believe personal style should feel effortless, comfortable, and completely your own. Browse the pieces, choose your size, and place an order in a few simple steps.</p><a class="btn outline" href="#order">Place an order</a></div>
+  </div>
+</section>
+<section class="wrap" id="order">
+  <div class="section-head"><div><div class="eyebrow">We’re here to help</div><h2>Place your order</h2><p>Fill in the details and send your order request through Messenger.</p></div></div>
+  <div class="order-layout">
+    <aside class="order-aside">
+      <div class="eyebrow">Need a hand?</div><h2 style="font-size:30px;margin-top:12px">Let’s find your fit.</h2>
+      <p>Not sure about a size, colour, or delivery? Message our page and we’ll help you before you order.</p>
+      <a class="btn" id="messengerAside" href="https://m.me/" target="_blank" rel="noopener">Chat on Messenger</a>
+      <p class="note">Before publishing, replace the Messenger link in this file with your Facebook Page’s real username link.</p>
+    </aside>
+    <div>
+      <form id="orderForm">
+        <div class="field"><label for="name">Your name *</label><input id="name" name="name" required placeholder="Full name"></div>
+        <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" required inputmode="tel" placeholder="01XXXXXXXXX"></div>
+        <div class="field"><label for="product">Product *</label><select id="product" name="product" required><option value="">Choose a product</option></select></div>
+        <div class="field"><label for="size">Size *</label><select id="size" name="size" required><option value="">Choose size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option><option>Need size advice</option></select></div>
+        <div class="field"><label for="colour">Colour</label><input id="colour" name="colour" placeholder="Preferred colour"></div>
+        <div class="field"><label for="quantity">Quantity *</label><input id="quantity" name="quantity" type="number" min="1" value="1" required></div>
+        <div class="field full"><label for="address">Delivery address *</label><textarea id="address" name="address" required placeholder="Area, district, full address"></textarea></div>
+        <div class="field full"><label for="notes">Additional notes</label><textarea id="notes" name="notes" placeholder="Any questions or delivery instructions"></textarea></div>
+        <div class="field full"><button class="btn" type="submit">Prepare order in Messenger</button><div class="form-help">This form opens Messenger with your order details ready to copy. The order is not confirmed until the shop replies.</div></div>
+      </form>
+      <div class="toast" id="orderSummary" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap footer-inner"><div><div class="wordmark">OLOCK CLOTH</div><p>Wear your story.<br>Independent clothing brand.</p></div><div class="social"><a href="#shop">Shop</a><a href="#order">Order</a><a id="messengerFooter" href="https://m.me/" target="_blank" rel="noopener">Facebook Messenger</a></div></div></footer>
+<script>
+/* EDIT THIS ARRAY: replace sample names, prices and photos with your real products. */
+const products = [
+ {name:"Everyday Tee",price:"Add price",size:"S–XL",image:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80"},
+ {name:"Relaxed Shirt",price:"Add price",size:"S–XL",image:"https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=800&q=80"},
+ {name:"Essential Hoodie",price:"Add price",size:"M–XXL",image:"https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80"},
+ {name:"Classic Overshirt",price:"Add price",size:"S–XL",image:"https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=800&q=80"},
+ {name:"Daily Layers",price:"Add price",size:"S–XL",image:"https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80"},
+ {name:"Weekend Fit",price:"Add price",size:"S–XXL",image:"https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80"}
+];
+/* IMPORTANT: Replace with your Facebook Page username, e.g. "m.me/YourPageName". */
+const MESSENGER_URL = "https://m.me/";
+const grid=document.getElementById("productGrid"), productSelect=document.getElementById("product");
+products.forEach((p,i)=>{
+ const card=document.createElement("article"); card.className="product";
+ card.innerHTML=`<div class="product-img"><img src="${p.image}" alt="${p.name}" loading="lazy"></div><div class="product-info"><div class="product-title">${p.name}</div><div class="product-meta"><span>${p.price}</span><span>Sizes: ${p.size}</span></div><button class="btn outline" type="button" data-product="${i}">Order this item</button></div>`;
+ grid.appendChild(card);
+ const option=document.createElement("option");option.value=p.name;option.textContent=p.name;productSelect.appendChild(option);
+});
+grid.addEventListener("click",e=>{const b=e.target.closest("[data-product]");if(!b)return;productSelect.value=products[Number(b.dataset.product)].name;document.getElementById("order").scrollIntoView({behavior:"smooth"});});
+["messengerAside","messengerFooter"].forEach(id=>document.getElementById(id).href=MESSENGER_URL);
+document.getElementById("orderForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const f=new FormData(e.target);
+ const summary=`OLOCK CLOTH — ORDER REQUEST\nName: ${f.get("name")}\nPhone: ${f.get("phone")}\nProduct: ${f.get("product")}\nSize: ${f.get("size")}\nColour: ${f.get("colour")||"Not specified"}\nQuantity: ${f.get("quantity")}\nAddress: ${f.get("address")}\nNotes: ${f.get("notes")||"None"}\n\nPlease confirm availability, total price, delivery charge and payment details.`;
+ const box=document.getElementById("orderSummary");box.textContent=summary+"\n\nMessenger will open. If your Page link is not configured yet, copy this order summary and send it to the Olock Cloth Page.";box.style.display="block";
+ if(navigator.clipboard && window.isSecureContext){navigator.clipboard.writeText(summary).catch(()=>{});}
+ window.open(MESSENGER_URL,"_blank","noopener");
+ box.scrollIntoView({behavior:"smooth",block:"nearest"});
+});
+</script>
+</body>
+</html>
